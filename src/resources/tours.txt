@@ -1,0 +1,5 @@
+Lago Llanquihue;Puerto Varas;15000
+Volcan Osorno;Puerto Varas;25000
+Saltos del Petrohue;Ensenada;18000
+Frutillar Cultural;Frutillar;12000
+Ruta Gastronomica;Llanquihue;30000
