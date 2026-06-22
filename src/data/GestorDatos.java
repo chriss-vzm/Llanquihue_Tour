@@ -1,6 +1,7 @@
 package data;
 
 import model.Tour;
+import model.Guia;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -28,10 +29,17 @@ public class GestorDatos {
                 String destino = datos[1];
                 int precio = Integer.parseInt(datos[2]);
 
+
+                Guia guia = new Guia(
+                        datos[3],
+                        datos[4]
+                );
+
                 Tour tour = new Tour(
                         nombre,
                         destino,
-                        precio
+                        precio,
+                        guia
                 );
 
                 listaTours.add(tour);

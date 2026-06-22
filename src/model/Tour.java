@@ -5,14 +5,15 @@ public class Tour {
     private String nombre;
     private String destino;
     private int precio;
+    private Guia guia;
 
 
-
-    public Tour(String nombre, String destino, int precio){
+    public Tour(String nombre, String destino, int precio, Guia guia){
 
         this.nombre = nombre;
         this.destino = destino;
         this.precio = precio;
+        this.guia = guia;
 
 
     }
@@ -33,6 +34,10 @@ public class Tour {
         return precio;
     }
 
+    public Guia getGuia() {
+        return guia;
+    }
+
     //SETTERS
 
 
@@ -48,12 +53,18 @@ public class Tour {
         this.precio = precio;
     }
 
+
+    public void setGuia(Guia guia) {
+        this.guia = guia;
+    }
+
     @Override
     public String toString() {
         return "Tour{ " +
                 "nombre: '" + nombre + '\'' +
                 ", destino: '" + destino + '\'' +
                 ", precio: " + precio +
+                ", guia: " + guia +
                 '}';
     }
 

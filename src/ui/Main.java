@@ -29,5 +29,14 @@ public class Main {
 
         }
 
+        System.out.println("\n=== TOURS EN PUERTO VARAS ===");
+
+        for (Tour t : tours) {
+
+            if (t.getDestino().equalsIgnoreCase("Puerto Varas")) {
+                System.out.println(t);
+            }
+
+        }
     }
 }
