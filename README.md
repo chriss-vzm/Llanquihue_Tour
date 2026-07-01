@@ -2,9 +2,13 @@
 
 ## Descripción
 
-Llanquihue Tour es una aplicación desarrollada en Java para gestionar información de tours turísticos mediante la lectura de datos desde un archivo de texto. Los datos son cargados en una colección ArrayList de objetos Tour, permitiendo recorrer y filtrar la información según distintos criterios.
+Llanquihue Tour es una aplicación desarrollada en Java que permite gestionar distintos servicios turísticos del sector Lago Llanquihue utilizando los principios de la Programación Orientada a Objetos.
 
-Este proyecto fue desarrollado para la actividad formativa de la Semana 4 de la asignatura Desarrollo Orientado a Objetos I.
+El sistema implementa herencia, polimorfismo, clases abstractas y sobreescritura de métodos (`@Override`), permitiendo representar distintos tipos de servicios turísticos como rutas gastronómicas, paseos lacustres y excursiones culturales.
+
+Este proyecto fue desarrollado para la actividad formativa de la Semana 7 de la asignatura Desarrollo Orientado a Objetos I.
+
+---
 
 ## Estructura del Proyecto
 
@@ -13,46 +17,86 @@ src
 ├── data
 │   └── GestorDatos.java
 ├── model
-│   └── Tour.java
-├── resources
-│   └── tours.txt
-└── ui
-    └── Main.java
+│   ├── ServicioTuristico.java
+│   ├── RutaGastronomica.java
+│   ├── PaseoLacustre.java
+│   ├── ExcursionCultural.java
+│   └── Guia.java
+├── ui
+│   └── Main.java
 ```
+
+---
+
+## Clases Implementadas
+
+### Clase abstracta
+
+- ServicioTuristico
+    - nombre
+    - duracionHoras
+    - método abstracto `mostrarInformacion()`
+
+### Clases hijas
+
+- RutaGastronomica
+- PaseoLacustre
+- ExcursionCultural
+
+### Gestión de datos
+
+- GestorDatos
+    - Crea y administra la colección de servicios turísticos.
+
+### Clase principal
+
+- Main
+    - Ejecuta el programa y muestra la información por consola.
+
+---
 
 ## Funcionalidades
 
-* Lectura de datos desde un archivo de texto.
-* Creación de objetos Tour a partir de los datos leídos.
-* Almacenamiento de objetos en un ArrayList.
-* Recorrido completo de la colección.
-* Filtrado de tours según el precio.
-* Visualización de resultados por consola.
+- Creación de distintos servicios turísticos.
+- Uso de herencia entre clases.
+- Implementación de una clase abstracta.
+- Sobrescritura del método `mostrarInformacion()` mediante `@Override`.
+- Polimorfismo utilizando referencias del tipo `ServicioTuristico`.
+- Almacenamiento de objetos en un `ArrayList`.
+- Recorrido de la colección utilizando un ciclo.
+- Visualización de la información de cada servicio por consola.
 
-## Formato del Archivo
+---
 
-El archivo `tours.txt` contiene registros separados por punto y coma (;).
+## Conceptos de Programación Orientada a Objetos Aplicados
 
-Ejemplo:
+- Clases y Objetos
+- Encapsulamiento
+- Herencia
+- Polimorfismo
+- Clases Abstractas
+- Métodos Abstractos
+- Sobrescritura de métodos (`@Override`)
+- Colecciones (`ArrayList`)
 
-```text
-Lago Llanquihue;Puerto Varas;15000
-Volcan Osorno;Puerto Varas;25000
-Saltos del Petrohue;Ensenada;18000
-```
+---
 
 ## Requisitos
 
-* Java JDK 17 o superior.
-* IntelliJ IDEA o cualquier IDE compatible con Java.
+- Java JDK 17 o superior.
+- IntelliJ IDEA (o cualquier IDE compatible con Java).
+
+---
 
 ## Ejecución
 
 1. Abrir el proyecto en IntelliJ IDEA.
-2. Verificar que el archivo `tours.txt` se encuentre en la carpeta `src/resources`.
-3. Ejecutar la clase `Main` ubicada en el paquete `ui`.
-4. Los resultados se mostrarán en la consola.
+2. Ejecutar la clase `Main` ubicada en el paquete `ui`.
+3. El programa creará los distintos servicios turísticos.
+4. La información de cada servicio será mostrada en la consola mediante polimorfismo.
+
+---
 
 ## Autor
 
-Christopher Zuñiga
+**Christopher Zuñiga**
