@@ -1,20 +1,26 @@
 package ui;
 
 import data.GestorDatos;
+import model.RutaGastronomica;
+import model.ServicioTuristico;
 import model.Tour;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        GestorDatos gestor = new GestorDatos();
-        System.out.println(gestor.crearRuta());
-        System.out.println();
+        GestorDatos datos = new GestorDatos();
+        List<ServicioTuristico> servicio = datos.crearServicios();
 
-        System.out.println(gestor.crearPaseo());
-        System.out.println();
+
+        for(ServicioTuristico s : servicio){
+            s.mostrarInformacion();
+            System.out.println();
+        }
 
     }
 }

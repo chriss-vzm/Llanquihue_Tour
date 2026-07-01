@@ -1,5 +1,7 @@
 package model;
 
+
+
 public class RutaGastronomica extends ServicioTuristico{
 
     int numeroParadas;
@@ -22,6 +24,16 @@ public class RutaGastronomica extends ServicioTuristico{
     public void setNumeroParadas(int numeroParadas) {
         this.numeroParadas = numeroParadas;
     }
+
+
+    @Override
+    public void mostrarInformacion(){
+        System.out.println(" -------- RUTA GASTRONOMICA --------");
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Duracion: " + getDuracionHoras() + "hrs");
+        System.out.println("Paradas: " + numeroParadas + " paradas");
+    }
+
 
     @Override
     public String toString(){

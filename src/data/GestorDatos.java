@@ -5,33 +5,47 @@ import model.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GestorDatos {
 
 
-    public RutaGastronomica crearRuta(){
-        return new RutaGastronomica(
-          "Ruta del Sabor",
-          3,
-          3
-        );
+    public List<ServicioTuristico> crearServicios() {
 
-    }
 
-    public PaseoLacustre crearPaseo(){
-        return new PaseoLacustre(
-                "Paseo Lacustre Lago Llanquigue",
+        List<ServicioTuristico> servicios = new ArrayList<>();
+
+
+        servicios.add(new RutaGastronomica(
+                "Ruta del sabor",
                 3,
-                "Lancha Turística"
-        );
+                2));
+
+        servicios.add (new PaseoLacustre(
+                "Lago Llanquigue",
+                3 ,
+                "Lancha Turística"));
+
+        servicios.add(new ExcursionCultural(
+                "Museo Colonial Alemán",
+                2,
+                "Frutillar"));
+
+
+        servicios.add(new ExcursionCultural(
+                "Teatro del Lago",
+                1,
+                "Frutillar"));
+
+
+        servicios.add(new PaseoLacustre(
+                "Bahía de Ensenada",
+                2,
+                "Catamarán"));
+
+
+        return servicios;
     }
-
-
-
-
-
-
-
 
 
 }
