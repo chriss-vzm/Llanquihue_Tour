@@ -1,6 +1,6 @@
 package model;
 
-public class PaseoLacustre extends ServicioTuristico{
+public class PaseoLacustre extends ServicioTuristico implements Registrable{
 
     String tipoEmbarcacion;
 
@@ -34,6 +34,15 @@ public class PaseoLacustre extends ServicioTuristico{
         System.out.println("Embarcacion: " + tipoEmbarcacion);
     }
 
+
+    @Override
+    public void mostrarResumen() {
+        System.out.println("Paseo Lacustre: " + getNombre()
+        + " | Duracion: " + getDuracionHoras() + "hrs"
+        + " | Embarcación: " + tipoEmbarcacion
+        );
+
+    }
 
 
 

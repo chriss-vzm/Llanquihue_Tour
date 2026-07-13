@@ -8,7 +8,7 @@ public class Tour {
     private Guia guia;
 
 
-    public Tour(String nombre, String destino, int precio, Guia guia){
+    public Tour(String nombre, String destino, int precio, Guia guia) {
 
         this.nombre = nombre;
         this.destino = destino;
@@ -17,7 +17,6 @@ public class Tour {
 
 
     }
-
 
 
     //GETTERS
@@ -68,5 +67,6 @@ public class Tour {
                 '}';
     }
 
-
 }
+
+

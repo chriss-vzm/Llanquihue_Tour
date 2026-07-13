@@ -1,6 +1,6 @@
 package model;
 
-public class Guia {
+public class Guia implements Registrable{
 
     private String nombre;
     private String telefono;
@@ -32,5 +32,13 @@ public class Guia {
                 "nombre='" + nombre + '\'' +
                 ", telefono='" + telefono + '\'' +
                 '}';
+    }
+
+    @Override
+    public void mostrarResumen() {
+        System.out.println("Guia: " + getNombre()
+        + " | Telefono: " + getTelefono()
+        );
+
     }
 }

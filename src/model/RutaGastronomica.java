@@ -2,7 +2,7 @@ package model;
 
 
 
-public class RutaGastronomica extends ServicioTuristico{
+public class RutaGastronomica extends ServicioTuristico implements Registrable{
 
     int numeroParadas;
 
@@ -41,4 +41,12 @@ public class RutaGastronomica extends ServicioTuristico{
     }
 
 
+    @Override
+    public void mostrarResumen() {
+        System.out.println("Ruta Gastronómica: " + getNombre()
+        + " | Duracion: " + getDuracionHoras() + "hrs"
+        + " | Paradas: " + numeroParadas
+        );
+
+    }
 }
