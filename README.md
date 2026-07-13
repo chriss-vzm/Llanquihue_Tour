@@ -2,101 +2,67 @@
 
 ## Descripción
 
-Llanquihue Tour es una aplicación desarrollada en Java que permite gestionar distintos servicios turísticos del sector Lago Llanquihue utilizando los principios de la Programación Orientada a Objetos.
+Aplicación desarrollada en Java para registrar y visualizar
+entidades relacionadas con la agencia Llanquihue Tour.
 
-El sistema implementa herencia, polimorfismo, clases abstractas y sobreescritura de métodos (`@Override`), permitiendo representar distintos tipos de servicios turísticos como rutas gastronómicas, paseos lacustres y excursiones culturales.
+El sistema utiliza programación orientada a objetos,
+herencia, interfaces, polimorfismo, ArrayList, instanceof
+y una interfaz gráfica básica mediante JOptionPane.
 
-Este proyecto fue desarrollado para la actividad formativa de la Semana 7 de la asignatura Desarrollo Orientado a Objetos I.
+## Clases e interfaces
 
----
+### Interfaz
 
-## Estructura del Proyecto
-
-```text
-src
-├── data
-│   └── GestorDatos.java
-├── model
-│   ├── ServicioTuristico.java
-│   ├── RutaGastronomica.java
-│   ├── PaseoLacustre.java
-│   ├── ExcursionCultural.java
-│   └── Guia.java
-├── ui
-│   └── Main.java
-```
-
----
-
-## Clases Implementadas
+- Registrable
+  - Define el método mostrarResumen().
 
 ### Clase abstracta
 
 - ServicioTuristico
-    - nombre
-    - duracionHoras
-    - método abstracto `mostrarInformacion()`
+  - Superclase de los servicios turísticos.
 
-### Clases hijas
+### Clases
 
 - RutaGastronomica
 - PaseoLacustre
-- ExcursionCultural
-
-### Gestión de datos
-
+- Guia
 - GestorDatos
-    - Crea y administra la colección de servicios turísticos.
-
-### Clase principal
-
 - Main
-    - Ejecuta el programa y muestra la información por consola.
 
----
+RutaGastronomica, PaseoLacustre y Guia implementan
+la interfaz Registrable.
 
 ## Funcionalidades
 
-- Creación de distintos servicios turísticos.
-- Uso de herencia entre clases.
-- Implementación de una clase abstracta.
-- Sobrescritura del método `mostrarInformacion()` mediante `@Override`.
-- Polimorfismo utilizando referencias del tipo `ServicioTuristico`.
-- Almacenamiento de objetos en un `ArrayList`.
-- Recorrido de la colección utilizando un ciclo.
-- Visualización de la información de cada servicio por consola.
+- Registrar rutas gastronómicas.
+- Registrar paseos lacustres.
+- Registrar guías turísticos.
+- Almacenar distintos objetos en un ArrayList<Registrable>.
+- Identificar objetos mediante instanceof.
+- Mostrar los registros usando polimorfismo.
+- Ingresar y visualizar datos mediante JOptionPane.
 
----
+## Estructura
 
-## Conceptos de Programación Orientada a Objetos Aplicados
-
-- Clases y Objetos
-- Encapsulamiento
-- Herencia
-- Polimorfismo
-- Clases Abstractas
-- Métodos Abstractos
-- Sobrescritura de métodos (`@Override`)
-- Colecciones (`ArrayList`)
-
----
-
-## Requisitos
-
-- Java JDK 17 o superior.
-- IntelliJ IDEA (o cualquier IDE compatible con Java).
-
----
+    src
+    ├── data
+    │   └── GestorDatos.java
+    ├── model
+    │   ├── ServicioTuristico.java
+    │   ├── Registrable.java
+    │   ├── RutaGastronomica.java
+    │   ├── PaseoLacustre.java
+    │   └── Guia.java
+    └── ui
+    └── Main.java
 
 ## Ejecución
 
 1. Abrir el proyecto en IntelliJ IDEA.
-2. Ejecutar la clase `Main` ubicada en el paquete `ui`.
-3. El programa creará los distintos servicios turísticos.
-4. La información de cada servicio será mostrada en la consola mediante polimorfismo.
-
----
+2. Verificar que esté configurado Java JDK 17 o superior.
+3. Ejecutar la clase Main ubicada en el paquete ui.
+4. Seleccionar una opción desde el menú mostrado mediante JOptionPane.
 
 ## Autor
 
-**Christopher Zuñiga**
+Christopher Zuñiga

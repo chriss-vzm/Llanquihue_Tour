@@ -140,8 +140,20 @@ public class Main {
 
                         String texto = "";
 
-                        for (Registrable registro
-                                : gestor.getRegistros()) {
+                        for (Registrable registro : gestor.getRegistros()) {
+
+                            if (registro instanceof RutaGastronomica) {
+
+                                texto += "Tipo: Ruta gastronómica\n";
+
+                            } else if (registro instanceof PaseoLacustre) {
+
+                                texto += "Tipo: Paseo lacustre\n";
+
+                            } else if (registro instanceof Guia) {
+
+                                texto += "Tipo: Guía turístico\n";
+                            }
 
                             texto += registro.mostrarResumen();
                             texto += "\n\n";
