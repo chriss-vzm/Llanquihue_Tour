@@ -10,21 +10,30 @@ public class Guia implements Registrable{
         this.telefono = telefono;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+
+    //GETTERS
 
     public String getTelefono() {
         return telefono;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    //SETTERS
+
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+
 
     @Override
     public String toString() {
@@ -35,10 +44,9 @@ public class Guia implements Registrable{
     }
 
     @Override
-    public void mostrarResumen() {
-        System.out.println("Guia: " + getNombre()
-        + " | Telefono: " + getTelefono()
-        );
-
+    public String mostrarResumen() {
+        return "-------- GUÍA TURÍSTICO --------"
+                + "\nNombre: " + nombre
+                + "\nTeléfono: " + telefono;
     }
 }

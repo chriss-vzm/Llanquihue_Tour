@@ -27,21 +27,17 @@ public class PaseoLacustre extends ServicioTuristico implements Registrable{
     }
 
     @Override
-    public void mostrarInformacion(){
-        System.out.println(" -------- PASEO LACUSTRE --------");
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Duracion: " + getDuracionHoras() + "hrs");
-        System.out.println("Embarcacion: " + tipoEmbarcacion);
+    public String mostrarInformacion() {
+        return "-------- PASEO LACUSTRE --------"
+                + "\nNombre: " + getNombre()
+                + "\nDuración: " + getDuracionHoras() + " horas"
+                + "\nTipo de embarcación: " + tipoEmbarcacion;
     }
 
 
     @Override
-    public void mostrarResumen() {
-        System.out.println("Paseo Lacustre: " + getNombre()
-        + " | Duracion: " + getDuracionHoras() + "hrs"
-        + " | Embarcación: " + tipoEmbarcacion
-        );
-
+    public String mostrarResumen() {
+        return mostrarInformacion();
     }
 
 

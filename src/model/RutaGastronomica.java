@@ -27,11 +27,11 @@ public class RutaGastronomica extends ServicioTuristico implements Registrable{
 
 
     @Override
-    public void mostrarInformacion(){
-        System.out.println(" -------- RUTA GASTRONOMICA --------");
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Duracion: " + getDuracionHoras() + "hrs");
-        System.out.println("Paradas: " + numeroParadas + " paradas");
+    public String mostrarInformacion() {
+        return "-------- RUTA GASTRONÓMICA --------"
+                + "\nNombre: " + getNombre()
+                + "\nDuración: " + getDuracionHoras() + " horas"
+                + "\nCantidad de paradas: " + numeroParadas;
     }
 
 
@@ -42,11 +42,7 @@ public class RutaGastronomica extends ServicioTuristico implements Registrable{
 
 
     @Override
-    public void mostrarResumen() {
-        System.out.println("Ruta Gastronómica: " + getNombre()
-        + " | Duracion: " + getDuracionHoras() + "hrs"
-        + " | Paradas: " + numeroParadas
-        );
-
+    public String mostrarResumen() {
+        return mostrarInformacion();
     }
 }

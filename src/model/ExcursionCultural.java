@@ -1,4 +1,4 @@
-package model;
+/*package model;
 
 public class ExcursionCultural extends ServicioTuristico{
 
@@ -24,7 +24,7 @@ public class ExcursionCultural extends ServicioTuristico{
     }
 
     @Override
-    public void mostrarInformacion(){
+    public String mostrarInformacion(){
         System.out.println(" -------- EXCURSION CULTURAL --------");
         System.out.println("Nombre: " + getNombre());
         System.out.println("Duracion: " + getDuracionHoras() + "hrs");
@@ -38,3 +38,6 @@ public class ExcursionCultural extends ServicioTuristico{
         return super.toString() + "\nLugar Histórico: " + lugarHistorico;
     }
 }
+
+
+ */

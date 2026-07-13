@@ -1,39 +1,21 @@
 package data;
 
-import model.*;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.List;
+import model.Registrable;
 
 public class GestorDatos {
 
+    private ArrayList<Registrable> registros;
 
-    public List<Registrable> crearServicios() {
-
-
-        List<Registrable> registros = new ArrayList<>();
-
-
-        registros.add(new RutaGastronomica(
-                "Ruta del sabor",
-                3,
-                2));
-
-        registros.add(new Guia("Christopher Zuñiga", "998693238"));
-
-        registros.add(new PaseoLacustre(
-                "Pase Lago Llanquigue",
-                3,
-                "Catamarán Turístico Lago Azul"
-        ));
-
-
-
-        return registros;
+    public GestorDatos() {
+        registros = new ArrayList<>();
     }
 
+    public void agregarRegistro(Registrable registro) {
+        registros.add(registro);
+    }
 
+    public ArrayList<Registrable> getRegistros() {
+        return registros;
+    }
 }
-

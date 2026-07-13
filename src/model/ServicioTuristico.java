@@ -35,7 +35,7 @@ public abstract class ServicioTuristico {
 
 
 
-    public abstract void mostrarInformacion();
+    public abstract String mostrarInformacion();
 
 
 
