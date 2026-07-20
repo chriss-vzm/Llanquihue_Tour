@@ -2,16 +2,17 @@ package model;
 
 public class Reserva implements Mostrable{
 
-    private String idReserva;
     private Cliente cliente;
+    private Guia guia;
     private ServicioTuristico servicio;
     private String fecha;
 
 
 
-    public Reserva(String idReserva, Cliente cliente, ServicioTuristico servicio, String fecha){
-        this.idReserva = idReserva;
+    public Reserva(Cliente cliente,Guia guia, ServicioTuristico servicio, String fecha){
+
         this.cliente = cliente;
+        this.guia = guia;
         this.servicio = servicio;
         this.fecha = fecha;
 
@@ -19,8 +20,8 @@ public class Reserva implements Mostrable{
 
     // GETTERS
 
-    public String getIdReserva() {
-        return idReserva;
+    public Guia getGuia() {
+        return guia;
     }
 
     public Cliente getCliente() {
@@ -44,7 +45,11 @@ public class Reserva implements Mostrable{
     }
 
     @Override
-    public void mostrarResumen(){
-
+    public void mostrarDatos() {
+        System.out.println("===== RESERVA =====");
+        System.out.println("Cliente: " + cliente.getNombre());
+        System.out.println("Guía: " + guia.getNombre());
+        System.out.println("Servicio: " + servicio.getNombre());
+        System.out.println("Fecha: " + fecha);
     }
 }

@@ -1,11 +1,11 @@
 package model;
 
-public class Guia extends Persona{
+public class Guia extends Persona implements Mostrable{
 
     private String id;
 
 
-    public Guia(String nombre, int edad, String telefono) {
+    public Guia(String nombre, int edad, String telefono,String id) {
         super(nombre, edad, telefono);
         this.id = id;
     }
@@ -23,6 +23,18 @@ public class Guia extends Persona{
         this.id = id;
     }
 
+
+    @Override
+    public void mostrarDatos() {
+        System.out.println(
+                "Guia: " + getNombre()
+                + " | Edad: " + getEdad()
+                + " | Telefono: " + getTelefono()
+                + " | ID: " + id
+        );
+
+
+    }
 
 }
 

@@ -2,7 +2,7 @@ package model;
 
 
 
-public class RutaGastronomica extends ServicioTuristico{
+public class RutaGastronomica extends ServicioTuristico implements Mostrable{
 
     int numeroParadas;
 
@@ -23,6 +23,19 @@ public class RutaGastronomica extends ServicioTuristico{
 
     public void setNumeroParadas(int numeroParadas) {
         this.numeroParadas = numeroParadas;
+    }
+
+
+    @Override
+    public void mostrarDatos(){
+        System.out.println(
+                "ID: " + getId()
+                + " | Nombre: " + getNombre()
+                + " | Precio: " + getPrecio()
+                + " | Proveedor: " + getProveedor()
+                + " | Numero Paradas: " + numeroParadas
+
+        );
     }
 
 

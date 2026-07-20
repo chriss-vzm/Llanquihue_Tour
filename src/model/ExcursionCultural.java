@@ -1,6 +1,6 @@
 package model;
 
-public class ExcursionCultural extends ServicioTuristico{
+public class ExcursionCultural extends ServicioTuristico implements  Mostrable{
 
     String lugarHistorico;
 
@@ -23,7 +23,17 @@ public class ExcursionCultural extends ServicioTuristico{
         this.lugarHistorico = lugarHistorico;
     }
 
+    @Override
+    public void mostrarDatos(){
+        System.out.println(
+                "ID: " + getId()
+                        + " | Nombre: " + getNombre()
+                        + " | Precio: " + getPrecio()
+                        + " | Proveedor: " + getProveedor()
+                        + " | Lugar Histórico: " + lugarHistorico
 
+        );
+    }
 
 }
 

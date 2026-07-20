@@ -1,4 +1,4 @@
-RG001;La Ruta del Sabor;30000;P001
-RG002;Sabores del Puerto Varas;28000;P001
-PL001;Lago Llanquigue;15000;P002
-EC001;Frutillar Patrimonial;10000;POO3
+RG001;La Ruta del Sabor;30000;P001,2
+RG002;Sabores del Puerto Varas;28000;P001,3
+PL001;Lago Llanquigue;15000;P002,Lancha
+EC001;Frutillar Patrimonial;10000;P003,Museo Colonial Alemán

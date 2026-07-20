@@ -1,6 +1,6 @@
 package model;
 
-public abstract class ServicioTuristico {
+public abstract class ServicioTuristico  {
 
     private String nombre;
     private String id;
@@ -52,4 +52,10 @@ public abstract class ServicioTuristico {
     public void setProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
     }
+
+
+
 }
+
+
+
