@@ -2,13 +2,13 @@ package model;
 
 
 
-public class RutaGastronomica extends ServicioTuristico implements Registrable{
+public class RutaGastronomica extends ServicioTuristico{
 
     int numeroParadas;
 
-    public RutaGastronomica(String nombre, int duracionHoras, int numeroParadas){
+    public RutaGastronomica(String id, String nombre, double precio, Proveedor proveedor, int numeroParadas){
 
-        super(nombre, duracionHoras);
+        super(id,nombre,precio,proveedor);
         this.numeroParadas = numeroParadas;
 
     }
@@ -26,23 +26,4 @@ public class RutaGastronomica extends ServicioTuristico implements Registrable{
     }
 
 
-    @Override
-    public String mostrarInformacion() {
-        return "-------- RUTA GASTRONÓMICA --------"
-                + "\nNombre: " + getNombre()
-                + "\nDuración: " + getDuracionHoras() + " horas"
-                + "\nCantidad de paradas: " + numeroParadas;
-    }
-
-
-    @Override
-    public String toString(){
-        return super.toString() + "\nNumero Paradas: " + numeroParadas;
-    }
-
-
-    @Override
-    public String mostrarResumen() {
-        return mostrarInformacion();
-    }
 }

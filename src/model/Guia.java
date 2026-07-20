@@ -1,52 +1,28 @@
 package model;
 
-public class Guia implements Registrable{
+public class Guia extends Persona{
 
-    private String nombre;
-    private String telefono;
+    private String id;
 
-    public Guia(String nombre, String telefono) {
-        this.nombre = nombre;
-        this.telefono = telefono;
+
+    public Guia(String nombre, int edad, String telefono) {
+        super(nombre, edad, telefono);
+        this.id = id;
     }
-
 
 
     //GETTERS
 
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public String getNombre() {
-        return nombre;
+    public String getId(){
+        return id;
     }
 
     //SETTERS
 
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setId(String id) {
+        this.id = id;
     }
 
 
-
-    @Override
-    public String toString() {
-        return "Guia{" +
-                "nombre='" + nombre + '\'' +
-                ", telefono='" + telefono + '\'' +
-                '}';
-    }
-
-    @Override
-    public String mostrarResumen() {
-        return "-------- GUÍA TURÍSTICO --------"
-                + "\nNombre: " + nombre
-                + "\nTeléfono: " + telefono;
-    }
 }
+

@@ -1,13 +1,13 @@
 package model;
 
-public class PaseoLacustre extends ServicioTuristico implements Registrable{
+public class PaseoLacustre extends ServicioTuristico {
 
     String tipoEmbarcacion;
 
 
-    public PaseoLacustre(String nombre, int duracionHoras, String tipoEmbarcacion){
+    public PaseoLacustre(String id, String nombre, double precio , Proveedor proveedor , String tipoEmbarcacion){
 
-        super(nombre,duracionHoras);
+        super(id,nombre,precio,proveedor);
         this.tipoEmbarcacion = tipoEmbarcacion;
 
 
@@ -26,26 +26,7 @@ public class PaseoLacustre extends ServicioTuristico implements Registrable{
         this.tipoEmbarcacion = tipoEmbarcacion;
     }
 
-    @Override
-    public String mostrarInformacion() {
-        return "-------- PASEO LACUSTRE --------"
-                + "\nNombre: " + getNombre()
-                + "\nDuración: " + getDuracionHoras() + " horas"
-                + "\nTipo de embarcación: " + tipoEmbarcacion;
-    }
 
-
-    @Override
-    public String mostrarResumen() {
-        return mostrarInformacion();
-    }
-
-
-
-    @Override
-    public String toString(){
-        return super.toString() + "\nTipo Embarcación: " + tipoEmbarcacion;
-    }
 
 
 }

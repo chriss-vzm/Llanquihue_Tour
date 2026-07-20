@@ -1,12 +1,12 @@
-/*package model;
+package model;
 
 public class ExcursionCultural extends ServicioTuristico{
 
     String lugarHistorico;
 
-    public ExcursionCultural(String nombre, int duracionHoras, String lugarHistorico){
+    public ExcursionCultural(String id, String nombre, double precio, Proveedor proveedor, String lugarHistorico){
 
-        super(nombre, duracionHoras);
+        super(id,nombre,precio,proveedor);
         this.lugarHistorico = lugarHistorico;
 
     }
@@ -23,21 +23,8 @@ public class ExcursionCultural extends ServicioTuristico{
         this.lugarHistorico = lugarHistorico;
     }
 
-    @Override
-    public String mostrarInformacion(){
-        System.out.println(" -------- EXCURSION CULTURAL --------");
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("Duracion: " + getDuracionHoras() + "hrs");
-        System.out.println("Lugar Histórico: " + lugarHistorico);
-    }
 
 
-
-    @Override
-    public String toString() {
-        return super.toString() + "\nLugar Histórico: " + lugarHistorico;
-    }
 }
 
 
- */

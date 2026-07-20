@@ -3,11 +3,15 @@ package model;
 public abstract class ServicioTuristico {
 
     private String nombre;
-    private int duracionHoras;
+    private String id;
+    private double precio;
+    private Proveedor proveedor;
 
-    public ServicioTuristico(String nombre, int duracionHoras){
+    public ServicioTuristico(String id,String nombre, double precio, Proveedor proveedor){
+        this.id = id;
         this.nombre = nombre;
-        this.duracionHoras = duracionHoras;
+        this.precio = precio;
+        this.proveedor = proveedor;
     }
 
 
@@ -17,8 +21,16 @@ public abstract class ServicioTuristico {
         return nombre;
     }
 
-    public int getDuracionHoras() {
-        return duracionHoras;
+    public String getId() {
+        return id;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public Proveedor getProveedor() {
+        return proveedor;
     }
 
 
@@ -29,21 +41,15 @@ public abstract class ServicioTuristico {
         this.nombre = nombre;
     }
 
-    public void setDuracionHoras(int duracionHoras) {
-        this.duracionHoras = duracionHoras;
+    public void setId(String id) {
+        this.id = id;
     }
 
-
-
-    public abstract String mostrarInformacion();
-
-
-
-    @Override
-    public String toString(){
-        return "Nombre: " + nombre +
-                "\nDuracion Horas: " + duracionHoras;
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
 
-
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
+    }
 }
