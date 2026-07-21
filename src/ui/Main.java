@@ -71,7 +71,7 @@ public class Main {
         Reserva reserva = new Reserva(
 
                 clienteSeleccionado,
-                g1.getGuias().get(0),
+                guiaSeleccionado,
                 servicioSeleccionado,
                 fecha
         );
