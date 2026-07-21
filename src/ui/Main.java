@@ -2,13 +2,10 @@ package ui;
 
 import data.GestorDatos;
 
-import javax.sound.midi.Soundbank;
-import javax.swing.JOptionPane;
+
 
 import exception.RutInvalidoException;
 import model.*;
-
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -20,12 +17,16 @@ public class Main {
         GestorDatos g1 = new GestorDatos();
 
         Cliente clienteSeleccionado = null;
+        Guia guiaSeleccionado = null;
         ServicioTuristico servicioSeleccionado = null;
 
 
 
         System.out.println("Ingrese rut cliente: ");
         String rut = sc.nextLine();
+
+        System.out.println("Ingrese id Guia.txt: ");
+        String idG = sc.nextLine();
 
         System.out.println("Ingrese id Servicio: ");
         String id = sc.nextLine();
@@ -42,6 +43,16 @@ public class Main {
                 clienteSeleccionado = cliente;
                 break;
             }
+        }
+
+        for(Guia guia : g1.getGuias()){
+
+            if(guia.getId().equals(idG)){
+
+                guiaSeleccionado = guia;
+                break;
+            }
+
         }
 
 
@@ -63,7 +74,7 @@ public class Main {
                 g1.getGuias().get(0),
                 servicioSeleccionado,
                 fecha
-        );;
+        );
 
         reserva.mostrarDatos();
 

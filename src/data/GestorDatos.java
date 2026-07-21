@@ -29,10 +29,10 @@ public class GestorDatos {
 
 
     public void cargarDatos(){
-        cargarProveedores("Proveedores.txt");
-        cargarClientes("Clientes.txt");
-        cargarGuias("Guia.txt");
-        cargarServicios("Servicios.txt");
+        cargarProveedores("src/resources/Proveedores.txt");
+        cargarClientes("src/resources/Clientes.txt");
+        cargarGuias("src/resources/Guia.txt");
+        cargarServicios("src/resources/Servicios.txt");
     }
 
     // =========================================================
@@ -57,6 +57,15 @@ public class GestorDatos {
                 }
 
                 String[] datos = linea.split(";");
+
+
+                if (datos.length != 4) {
+                    System.out.println(
+                            "Línea " + numeroLinea +
+                                    " inválida en el archivo de proveedores."
+                    );
+                    continue;
+                }
 
                 String id = datos[0].trim();
                 String nombre = datos[1].trim();
@@ -107,6 +116,15 @@ public class GestorDatos {
                 }
 
                 String[] datos = linea.split(";");
+
+
+                if (datos.length != 4) {
+                    System.out.println(
+                            "Línea " + numeroLinea +
+                                    " inválida en el archivo de clientes."
+                    );
+                    continue;
+                }
 
 
                 try {
@@ -173,6 +191,16 @@ public class GestorDatos {
 
                 String[] datos = linea.split(";");
 
+
+                if (datos.length != 4) {
+                    System.out.println(
+                            "Línea " + numeroLinea +
+                                    " inválida en el archivo de guias."
+                    );
+                    continue;
+                }
+
+
                 try {
                     String nombre = datos[0].trim();
                     int edad = Integer.parseInt(datos[1].trim());
@@ -228,6 +256,14 @@ public class GestorDatos {
                 }
 
                 String[] datos = linea.split(";");
+
+                if (datos.length != 5) {
+                    System.out.println(
+                            "Línea " + numeroLinea +
+                                    " inválida en el archivo de servicios."
+                    );
+                    continue;
+                }
 
 
                 try {
