@@ -48,11 +48,11 @@ public class Reserva implements Mostrable{
     @Override
     public void mostrarDatos() {
         System.out.println("===== RESERVA =====");
-        System.out.println("Cliente: " + cliente.getNombre());
-        System.out.println("RUT: " + cliente.getRut());
-        System.out.println("Guía: " + guia.getNombre());
-        System.out.println("Servicio: " + servicio.getNombre());
-        System.out.println("Precio: $" + servicio.getPrecio());
         System.out.println("Fecha: " + fecha);
+        cliente.mostrarDatos();
+        guia.mostrarDatos();
+        servicio.mostrarDatos();
+        servicio.getProveedor().mostrarDatos();
+
     }
 }

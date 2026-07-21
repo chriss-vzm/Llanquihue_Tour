@@ -1,6 +1,10 @@
 package model;
 
-public abstract class Persona {
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
+
+public abstract class Persona implements Mostrable {
 
 
     private String nombre;
@@ -45,6 +49,15 @@ public abstract class Persona {
         this.telefono = telefono;
     }
 
+
+
+    protected void mostrarDatosGenerales(){
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Edad: " + getEdad());
+        System.out.println("Telefono: " + getTelefono());
+    }
+
+    public abstract void mostrarDatos();
 
 
 

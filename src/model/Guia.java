@@ -26,13 +26,9 @@ public class Guia extends Persona implements Mostrable{
 
     @Override
     public void mostrarDatos() {
-        System.out.println(
-                "Guia.txt: " + getNombre()
-                + " | Edad: " + getEdad()
-                + " | Telefono: " + getTelefono()
-                + " | ID: " + id
-        );
-
+        System.out.println("===== GUIA =====");
+        mostrarDatosGenerales();
+        System.out.println("ID: " + id);
 
     }
 

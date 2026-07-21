@@ -1,6 +1,6 @@
 package model;
 
-public class Proveedor {
+public class Proveedor implements Mostrable{
 
     private String id;
     private String nombre;
@@ -59,6 +59,14 @@ public class Proveedor {
         this.numero = numero;
     }
 
+    @Override
+    public void mostrarDatos(){
+        System.out.println("===== PROVEEDOR =====");
+        System.out.println("ID: " + id);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Direccion: " + direccion);
+        System.out.println("Numero: " + numero);
+    }
 
 
 

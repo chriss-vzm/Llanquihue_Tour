@@ -11,8 +11,6 @@ public class Cliente extends Persona implements Mostrable{
 
         super(nombre, edad, telefono);
 
-
-
         validarRut(rut);
 
         this.rut = rut;
@@ -37,12 +35,10 @@ public class Cliente extends Persona implements Mostrable{
 
     @Override
     public void mostrarDatos(){
-        System.out.println(
-                "Cliente: " + getNombre()
-                + " | Edad: " + getEdad()
-                + " | Telefono: " + getTelefono()
-                + " | Rut: " + rut
-        );
+        System.out.println("===== CLIENTE =====");
+        mostrarDatosGenerales();
+        System.out.println("Rut: " + rut);
+
     }
 
 
