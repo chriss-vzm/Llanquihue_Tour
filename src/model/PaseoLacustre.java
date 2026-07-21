@@ -1,6 +1,6 @@
 package model;
 
-public class PaseoLacustre extends ServicioTuristico implements Mostrable{
+public class PaseoLacustre extends ServicioTuristico{
 
     String tipoEmbarcacion;
 
@@ -27,15 +27,10 @@ public class PaseoLacustre extends ServicioTuristico implements Mostrable{
     }
 
     @Override
-    public void mostrarDatos(){
-        System.out.println(
-                "ID: " + getId()
-                        + " | Nombre: " + getNombre()
-                        + " | Precio: " + getPrecio()
-                        + " | Proveedor: " + getProveedor()
-                        + " | Embarcación: " + tipoEmbarcacion
-
-        );
+    public void mostrarDatos() {
+        System.out.println("===== PASEO LACUSTRE =====");
+        mostrarDatosGenerales();
+        System.out.println("Tipo de embarcación: " + tipoEmbarcacion);
     }
 
 

@@ -1,6 +1,6 @@
 package model;
 
-public abstract class ServicioTuristico  {
+public abstract class ServicioTuristico implements Mostrable {
 
     private String nombre;
     private String id;
@@ -54,6 +54,16 @@ public abstract class ServicioTuristico  {
     }
 
 
+    protected void mostrarDatosGenerales() {
+        System.out.println("ID: " + id);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Precio: $" + precio);
+        System.out.println("Proveedor: " + proveedor.getNombre());
+    }
+
+
+    @Override
+    public abstract void mostrarDatos();
 
 }
 

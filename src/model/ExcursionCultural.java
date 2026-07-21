@@ -1,6 +1,6 @@
 package model;
 
-public class ExcursionCultural extends ServicioTuristico implements  Mostrable{
+public class ExcursionCultural extends ServicioTuristico{
 
     String lugarHistorico;
 
@@ -24,15 +24,10 @@ public class ExcursionCultural extends ServicioTuristico implements  Mostrable{
     }
 
     @Override
-    public void mostrarDatos(){
-        System.out.println(
-                "ID: " + getId()
-                        + " | Nombre: " + getNombre()
-                        + " | Precio: " + getPrecio()
-                        + " | Proveedor: " + getProveedor()
-                        + " | Lugar Histórico: " + lugarHistorico
-
-        );
+    public void mostrarDatos() {
+        System.out.println("===== EXCURSIÓN CULTURAL =====");
+        mostrarDatosGenerales();
+        System.out.println("Lugar histórico: " + lugarHistorico);
     }
 
 }

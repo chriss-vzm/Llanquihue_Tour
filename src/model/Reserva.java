@@ -2,6 +2,7 @@ package model;
 
 public class Reserva implements Mostrable{
 
+
     private Cliente cliente;
     private Guia guia;
     private ServicioTuristico servicio;
@@ -9,7 +10,7 @@ public class Reserva implements Mostrable{
 
 
 
-    public Reserva(Cliente cliente,Guia guia, ServicioTuristico servicio, String fecha){
+    public Reserva( Cliente cliente,Guia guia, ServicioTuristico servicio, String fecha){
 
         this.cliente = cliente;
         this.guia = guia;
@@ -48,8 +49,10 @@ public class Reserva implements Mostrable{
     public void mostrarDatos() {
         System.out.println("===== RESERVA =====");
         System.out.println("Cliente: " + cliente.getNombre());
+        System.out.println("RUT: " + cliente.getRut());
         System.out.println("Guía: " + guia.getNombre());
         System.out.println("Servicio: " + servicio.getNombre());
+        System.out.println("Precio: $" + servicio.getPrecio());
         System.out.println("Fecha: " + fecha);
     }
 }

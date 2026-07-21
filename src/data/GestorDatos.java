@@ -23,38 +23,68 @@ public class GestorDatos {
         proveedores = new ArrayList<>();
         reservas = new ArrayList<>();
 
-        cargarProveedoresFijos();
+        cargarDatos();
+
     }
 
 
-
-    private void cargarProveedoresFijos() {
-
-        Proveedor p1 = new Proveedor(
-                "P001",
-                "Sabores del Sur",
-                "Puerto Varas",
-                "998693667"
-        );
-
-        Proveedor p2 = new Proveedor(
-                "P002",
-                "Navegaciones Llanquihue",
-                "Frutillar",
-                "912356491"
-        );
-
-        Proveedor p3 = new Proveedor(
-                "P003",
-                "Turismo Patrimonial",
-                "Puerto Octay",
-                "956344221"
-        );
-
-        proveedores.add(p1);
-        proveedores.add(p2);
-        proveedores.add(p3);
+    public void cargarDatos(){
+        cargarProveedores("Proveedores.txt");
+        cargarClientes("Clientes.txt");
+        cargarGuias("Guia.txt");
+        cargarServicios("Servicios.txt");
     }
+
+    // =========================================================
+    // LECTURA DE PROVEEDORES
+    // =========================================================
+
+
+    public void cargarProveedores(String rutaArchivo){
+
+        try (BufferedReader lector =
+                     new BufferedReader(new FileReader(rutaArchivo))) {
+
+            String linea;
+            int numeroLinea = 0;
+
+            while ((linea = lector.readLine()) != null){
+
+                numeroLinea++;
+
+                if(linea.isBlank()){
+                    continue;
+                }
+
+                String[] datos = linea.split(";");
+
+                String id = datos[0].trim();
+                String nombre = datos[1].trim();
+                String direccion = datos[2].trim();
+                String numero = datos[3].trim();
+
+                Proveedor proveedor = new Proveedor(
+                        id,
+                        nombre,
+                        direccion,
+                        numero
+                );
+
+                proveedores.add(proveedor);
+
+            }
+
+        } catch (IOException e){
+
+            System.out.println(
+                    "No se pudo leer el archivo de clientes: " +
+                            e.getMessage()
+
+            );
+        }
+
+    }
+
 
     // =========================================================
     // LECTURA DE CLIENTES
@@ -180,6 +210,7 @@ public class GestorDatos {
     // LECTURA DE SERVICIOS
     // =========================================================
 
+
     public void cargarServicios(String rutaArchivo) {
 
         try (BufferedReader lector =
@@ -208,17 +239,6 @@ public class GestorDatos {
                     String idProveedor = datos[3].trim();
                     String datoEspecial = datos[4].trim();
 
-                    Proveedor proveedor =
-                            buscarProveedorPorId(idProveedor);
-
-                    if (proveedor == null) {
-                        System.out.println(
-                                "Proveedor " + idProveedor +
-                                        " no encontrado en línea " +
-                                        numeroLinea
-                        );
-                        continue;
-                    }
 
                     ServicioTuristico servicio = null;
 
@@ -231,7 +251,7 @@ public class GestorDatos {
                                 id,
                                 nombre,
                                 precio,
-                                proveedor,
+                                proveedores.get(0),
                                 numeroParadas
                         );
 
@@ -241,7 +261,7 @@ public class GestorDatos {
                                 id,
                                 nombre,
                                 precio,
-                                proveedor,
+                                proveedores.get(1),
                                 datoEspecial
                         );
 
@@ -251,7 +271,7 @@ public class GestorDatos {
                                 id,
                                 nombre,
                                 precio,
-                                proveedor,
+                                proveedores.get(2),
                                 datoEspecial
                         );
 
@@ -285,21 +305,6 @@ public class GestorDatos {
         }
     }
 
-    // =========================================================
-    // BÚSQUEDA DE PROVEEDOR
-    // =========================================================
-
-    public Proveedor buscarProveedorPorId(String id) {
-
-        for (Proveedor proveedor : proveedores) {
-
-            if (proveedor.getId().equalsIgnoreCase(id)) {
-                return proveedor;
-            }
-        }
-
-        return null;
-    }
 
     // =========================================================
     // GETTERS DE LAS LISTAS

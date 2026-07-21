@@ -1,5 +1,0 @@
-Lago Llanquihue;Puerto Varas;15000;Juan Perez;987654321
-Volcan Osorno;Puerto Varas;25000;Ana Soto;912345678
-Saltos del Petrohue;Ensenada;18000;Carlos Diaz;923456789
-Frutillar Cultural;Frutillar;12000;Maria Rojas;934567890
-Ruta Gastronomica;Llanquihue;30000;Pedro Muñoz;945678901
