@@ -11,6 +11,8 @@ public class Cliente extends Persona implements Mostrable{
 
         super(nombre, edad, telefono);
 
+
+
         validarRut(rut);
 
         this.rut = rut;
